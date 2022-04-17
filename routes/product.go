@@ -5,7 +5,7 @@ import (
 	"github.com/rixtrayker/fiber1/controllers"
 )
 
-func productRoutes(app *fiber.App) {
+func ProductRoutes(app *fiber.App) {
 
 	// Product endpoints
 	app.Post("/api/products", controllers.CreateProduct)

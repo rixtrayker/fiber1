@@ -5,7 +5,7 @@ import (
 	"github.com/rixtrayker/fiber1/controllers"
 )
 
-func userRoutes(app *fiber.App) {
+func UserRoutes(app *fiber.App) {
 
 	// User endpoints
 	app.Post("/api/users", controllers.CreateUser)

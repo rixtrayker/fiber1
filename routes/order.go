@@ -5,7 +5,7 @@ import (
 	"github.com/rixtrayker/fiber1/controllers"
 )
 
-func orderRoutes(app *fiber.App) {
+func OrderRoutes(app *fiber.App) {
 
 	// Order endpoints
 	app.Post("/api/orders", controllers.CreateOrder)

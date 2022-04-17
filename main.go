@@ -18,9 +18,9 @@ func main() {
 
 	app := fiber.New()
 	app.Get("/api", welcome)
-	orderRoutes(app)
-	userRoutes(app)
-	productRoutes(app)
+	routes.OrderRoutes(app)
+	routes.UserRoutes(app)
+	routes.ProductRoutes(app)
 
 	log.Fatal(app.Listen(":3000"))
 
