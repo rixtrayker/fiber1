@@ -8,4 +8,5 @@ type Coupon struct {
 	ExpirationDate time.Time `json:"expiration_date"`
 	Price          float64   `json:"price"`
 	Text           string    `json:"text"`
+	Description    string    `json:"description"`
 }

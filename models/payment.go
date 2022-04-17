@@ -2,8 +2,9 @@ package models
 
 import "time"
 
-type Price struct {
+type Payment struct {
 	ID        uint `json:"id" gorm:"primaryKey"`
 	CreatedAt time.Time
-	Images    []Image
+	Serial    string  `json:"serial"`
+	Cost      float64 `json:"cost"`
 }
