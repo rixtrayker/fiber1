@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/gofiber/fiber/v2"
 	"github.com/rixtrayker/fiber1/database"
 	"github.com/rixtrayker/fiber1/routes"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func welcome(c *fiber.Ctx) error {
@@ -26,10 +27,10 @@ func setupRoutes(app *fiber.App) {
 	app.Get("/api/products/:id", routes.GetProduct)
 	app.Put("/api/products/:id", routes.UpdateProduct)
 	// Payment endpoints
-	app.Post("/api/payments", routes.CreatePayment)
-	app.Get("/api/payments", routes.GetPayments)
-	app.Get("/api/payments/:id", routes.GetPayment)
-	app.Put("/api/payments/:id", routes.UpdatePayment)
+	// app.Post("/api/payments", routes.CreatePayment)
+	// app.Get("/api/payments", routes.GetPayments)
+	// app.Get("/api/payments/:id", routes.GetPayment)
+	// app.Put("/api/payments/:id", routes.UpdatePayment)
 	// Order endpoints
 	app.Post("/api/orders", routes.CreateOrder)
 	app.Get("/api/orders", routes.GetOrders)
