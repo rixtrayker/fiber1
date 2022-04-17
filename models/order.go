@@ -13,8 +13,9 @@ type Order struct {
 	Name      string    `json:"name"`
 	Email     string    `json:"serial" gorm:"uniqueIndex"`
 	Products  []Product `gorm:"many2many:order_products"`
-	Payment   Payment
-	UserId    int  `json:"user_id"`
-	User      User `gorm:"foreignKey:UserID"`
-	Coupons   []Coupon
+	PaymentId int       `json:"payment_id"`
+	Payment   Payment   `gorm:"foreignKey:PaymentId"`
+	UserId    int       `json:"user_id"`
+	User      User      `gorm:"foreignKey:UserId"`
+	Coupons   []Coupon  `gorm:"many2many:order_coupons"`
 }

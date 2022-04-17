@@ -2,8 +2,8 @@ package models
 
 import "time"
 
-type Price struct {
+type Attribute struct {
 	ID        uint `json:"id" gorm:"primaryKey"`
 	CreatedAt time.Time
-	Images    []Image
+	Images    []Image `gorm:"many2many:attribute_images"`
 }
